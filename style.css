@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -260,38 +260,44 @@ p{ color: #fff;
 }
 .picss{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 300px);
+    /* grid-template-rows: repeat(3, 300px); */
     background-color:black;
-    gap: 1px;
+    gap: 25px;
     width: 90%;
-    margin-left: 35px;
+    margin-left: 150px;
     margin-top: 80px;
    
+   
 }
-.picss-item{
+.picss .picss-item{
    
-    padding: 38px;
-    text-align: center;
-   
-   
-    
-}
-.picss img{
     width: 300px;
     height: 300px;
+    /* padding: 38px; */
+    text-align: center;
+   
+overflow: hidden;  
+}
+
+
+.picss img{
+    width: 100%;
+    height: 100%;
     opacity: 1;
     transition: all 500ms  ease;
     cursor: pointer;
+    object-fit: cover;
 }
-.picss img:hover{
-    width:302px ;
-    height: 302px;
+.picss .picss-item img:hover{
+   
 
     opacity: 0.6;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-    padding: 10px;
+    /* background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)); */
+    transform: scale(1.2);
     /* background-image:  linear-gradient(to bottom left, gray 50%, palegoldenrod 40%);; */
 }
+
 
 .abss{
     display: grid;
